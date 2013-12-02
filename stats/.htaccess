@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "profbristow.com Statistics"
+AuthUserFile /var/chroot/home/content/80/7528680/html/stats/.statspwd
+Require valid-user
+DirectoryIndex index.html

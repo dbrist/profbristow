@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+  <title>FBE 432: Corporate Financial Strategy - Duke K. Bristow at University of Southern California</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<style type="text/css">
+		@import "layout.css";
+	</style>
+    <!--[if IE]>
+		<style type="text/css">
+			@import "ie_layout.css";
+		</style>
+	<![endif]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle.lite.min.js"></script>
+	<script type="text/javascript"> 
+        $(function () {
+			$('.slideshow').cycle({
+				fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+			});
+			
+		  // IE6 doesn't handle the fade effect very well - so we'll stick with
+		  // the default non JavaScript version if that is the user's browser.
+		  if ($.browser.msie && $.browser.version < 7) return;
+		  
+		  $('.navigation li')
+		  
+			// remove the 'highlight' class from the li therefore stripping 
+			// the :hover rule
+			.removeClass('highlight')
+			
+			// within the context of the li element, find the a elements
+			.find('a')
+			
+			// create our new span.hover and loop through anchor:
+			.append('<span class="hover" />').each(function () {
+			  
+			  // cache a copy of the span, at the same time changing the opacity
+			  // to zero in preparation of the page being loaded
+			  var $span = $('> span.hover', this).css('opacity', 0);
+			  
+			  // when the user hovers in and out of the anchor
+			  $(this).hover(function () {
+				// on hover
+				
+				// stop any animations currently running, and fade to opacity: 1
+				$span.stop().fadeTo(200, 1);
+			  }, function () {
+				// off hover
+				
+				// again, stop any animations currently running, and fade out
+				$span.stop().fadeTo(200, 0);
+			  });
+			});
+			
+			//$('a.two15').hover(function() {	show('comment1'); });
+			$("a.two15").hover(function () {
+                $("#comment1").fadeToggle(100)
+			}); 
+			$("a.home").hover(function () {
+                $("#comment2").fadeToggle(100)
+			});
+			$("a.four32").hover(function () {
+                $("#comment3").fadeToggle(100)
+			});
+			$("a.four37").hover(function () {
+                $("#comment4").fadeToggle(100)
+			});
+			$("a.five27").hover(function () {
+                $("#comment5").fadeToggle(100)
+			});
+			$("a.five32").hover(function () {
+                $("#comment6").fadeToggle(100)
+			});
+			$("a.five48").hover(function () {
+                $("#comment7").fadeToggle(100)
+			});
+			$("a.five61").hover(function () {
+                $("#comment8").fadeToggle(100)
+			});
+			
+		});
+
+		function show(id) {
+			$('#' + id).fadeIn('fast', function() { });
+			
+		}
+		
+		jQuery.fn.fadeToggle = function(speed, easing, callback) {
+			return this.animate({opacity: 'toggle'}, speed, easing, callback);
+		}; 
+		
+    </script>
+</head>
+<body>
+<div class="centered">
+	<div id="header">
+		<div id="logo"><a href="index.html">Duke K. Bristow</a></div>
+	</div>
+	<div id="subpage" class="clearfix">
+		<div id="left">
+			<h1>FBE 432: Corporate Financial Strategy</h1>
+			<p>
+				Linkage between financial
+theory and policy and corporate strategy, the role of financial managers in
+developing corporate strategy; applications of concepts and techniques using cases.
+			</p>
+			
+			<div id="images">
+				<a target="_blank" href="http://www.amazon.com/Analysis-Financial-Management-Mcgraw-Hill-Insurance/dp/0077297652/ref=sr_1_1?s=books&ie=UTF8&qid=1298969558&sr=1-1"><img src="images/432_book.jpg" alt="" /></a> &nbsp; &nbsp; <a target="_blank" href="http://www.amazon.com/Corporate-Finance-McGraw-Hill-Insurance-Estate/dp/007733762X/ref=sr_1_1?ie=UTF8&qid=1298969054&sr=8-1"><img src="images/306_book.jpg" alt="" /></a> &nbsp; &nbsp; <a href="432.doc" target="_blank"><img src="images/syllabus.jpg" alt="" /></a>
+			</div>
+			<br />
+			<br />
+			<p style="border-top: 2px solid #e8e6df; border-bottom: 2px solid #e8e6df; padding: 14px 10px;">
+				Dr. Bristow is an expert on corporate finance and entrepreneurship. He has over 30 years experience including ten years between his MBA and his Ph.D. with Eli Lilly & Company.  He has published papers in economics, engineering, and law journals, and advises on matters involving financing.  Professor Bristow is a corporate director of Landec Corporation (Nasdaq: LNDC) a materials science company and consults with other high tech firms.  His education includes: PhD Financial Economics, UCLA; MBA, Indiana University; BS Chemical Engineering, Purdue University.  He was sole inventor for a medical device in June 2010 "Method for reducing the number of unwanted molecules in blood," United States Patent 7744883.
+			</p>
+		</div>
+		<div id="right">
+			<h2>Student Testimonial</h2>
+			<div class="test">
+				<img src="images/lawrence.jpg" alt="" />
+				My experience as a student entrepreneur in Professor Bristow's Entrepreneurial Finance class has armed me with the information I need to pursue scaling my business with the proper finances. When I was approached by venture capitalists regarding my business, I felt equipped to talk to them knowledgeably about their offerings because of what I had learned a week earlier from the class! The class has empowered me to take charge of my finances and provide a vision of growth for my business.
+
+				<cite>- Tracy Lawrence, Student</cite>
+			</div>
+		</div>
+	</div>
+		
+		<div id="footer">
+			Copyright &copy; 2011 Duke Bristow.  All rights reserved.
+		</div>
+	</div>
+</div>
+</body>
+</html>
